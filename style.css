@@ -1,0 +1,145 @@
+:root{
+  --bg1:#f7c6d9;
+  --bg2:#cde7ff;
+  --glass: rgba(255,255,255,0.70);
+  --panel: rgba(255,255,255,0.65);
+  --text:#1f1f1f;
+  --muted: rgba(0,0,0,0.55);
+  --accent:#ff5fa2;
+  --shadow: 0 18px 60px rgba(0,0,0,0.18);
+  --radius: 22px;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  min-height: 100vh;
+}
+
+.topbar{
+  position: fixed;
+  top:0; left:0; right:0;
+  padding: 14px 18px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.brand{ font-weight: 700; }
+.brand span{ color: var(--accent); }
+
+.right{ display:flex; gap:10px; align-items:center; }
+
+.wrap{
+  padding: 90px 16px 40px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.card{
+  background: var(--glass);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.progress{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.muted{ color: var(--muted); }
+
+.stage{
+  border-radius: 18px;
+  background: var(--panel);
+  padding: 18px;
+  min-height: 380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+.bigtext{
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.title{
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.photo{
+  width: 100%;
+  max-width: 520px;
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.22);
+}
+
+.controls{
+  margin-top: 14px;
+  display:flex;
+  justify-content:center;
+}
+
+.btn{
+  border: none;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor:pointer;
+  background: #111;
+  color: white;
+  font-weight: 700;
+  min-width: 180px;
+}
+
+.ghost{
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.7);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor:pointer;
+}
+
+.ghost:disabled{
+  opacity:0.5;
+  cursor:not-allowed;
+}
+
+.note{
+  text-align:center;
+  font-size: 12px;
+  margin: 12px 0 0;
+}
+
+/* Animationen */
+.fadeInUp{
+  animation: fadeInUp 700ms ease both;
+}
+.fadeIn{
+  animation: fadeIn 700ms ease both;
+}
+@keyframes fadeInUp{
+  from{ opacity:0; transform: translateY(14px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+@keyframes fadeIn{
+  from{ opacity:0; }
+  to{ opacity:1; }
+}

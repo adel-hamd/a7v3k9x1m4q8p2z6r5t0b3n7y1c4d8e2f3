@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Für Sara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">für <span>Soso</span></div>
+        <div class="right">
+            <button class="ghost" id="restartBtn" type="button" onclick="restart()" disabled>Neu starten</button>
+        </div>
+    </header>
+
+    <audio id="music" src="song.mp3" preload="auto"></audio>
+
+    <main class="wrap">
+        <section class="card" id="card">
+            <div class="progress">
+                <span id="stepCount">0 / 0</span>
+                <span id="status" class="muted">bereit</span>
+            </div>
+
+            <div id="stage" class="stage"></div>
+
+            <div class="controls">
+                <button class="btn" id="startBtn" type="button" onclick="startShow()">Start</button>
+            </div>
+
+            <p class="note muted">
+                Hinweis: Musik startet erst nach einem Klick (Browser-Regel). Danach läuft alles automatisch.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
